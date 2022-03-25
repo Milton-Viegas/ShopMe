@@ -23,7 +23,7 @@ public class EcommerceApplication {
             productService.save(new Product(4L, "Smartphone NOKIA 9 Pureview", 599.99, "https://www.worten.pt/i/d09d2fd25ea4a73a300635da70c5255604336785.jpg"));
             productService.save(new Product(5L, "Auriculares Bluetooth True Wireless JBL T 225", 69.99, "https://www.worten.pt/i/255a9f170c46d6139b88598918dfb4e4de3d329e.jpg"));
             productService.save(new Product(6L, "Smartwatch ULEFONE GPS Preto e Verde", 39.99, "https://www.worten.pt/i/f748f2100c7ef6de82cee46f5cba195f9758647c.jpg"));
-            productService.save(new Product(7L, "Passadeira de Corrida PRIXTON Run Fit ", 279.95, "https://www.worten.pt/i/451fb0fa804ed40ba2f068971ff9fc47d612e402.jpg"));
+            productService.save(new Product(7L, "Passadeira de Corrida PRIXTON Run Fit", 279.95, "https://www.worten.pt/i/451fb0fa804ed40ba2f068971ff9fc47d612e402.jpg"));
         };
     }
 }

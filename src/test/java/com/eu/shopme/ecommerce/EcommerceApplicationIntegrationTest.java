@@ -1,10 +1,10 @@
 package com.eu.shopme.ecommerce;
 
-import com.eu.shopme.controller.OrderController;
-import com.eu.shopme.controller.ProductController;
-import com.eu.shopme.dto.OrderProductDto;
+import com.eu.shopme.ecommerce.controller.OrderController;
+import com.eu.shopme.ecommerce.controller.ProductController;
+import com.eu.shopme.ecommerce.dto.OrderProductDto;
 import com.eu.shopme.ecommerce.model.Order;
-import com.eu.shopme.model.Product;
+import com.eu.shopme.ecommerce.model.Product;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,13 +56,13 @@ public class EcommerceApplicationIntegrationTest {
                 .assertThat(products)
                 .hasSize(7);
 
-        assertThat(products, hasItem(hasProperty("name", is("TV Set"))));
-        assertThat(products, hasItem(hasProperty("name", is("Game Console"))));
-        assertThat(products, hasItem(hasProperty("name", is("Sofa"))));
-        assertThat(products, hasItem(hasProperty("name", is("Icecream"))));
-        assertThat(products, hasItem(hasProperty("name", is("Beer"))));
-        assertThat(products, hasItem(hasProperty("name", is("Phone"))));
-        assertThat(products, hasItem(hasProperty("name", is("Watch"))));
+        assertThat(products, hasItem(hasProperty("name", is("Smartphone MOTOROLA Moto G9 Plus"))));
+        assertThat(products, hasItem(hasProperty("name", is("Secretaria Elétrica VINSETTO 920-071V90BK Preto"))));
+        assertThat(products, hasItem(hasProperty("name", is("Cadeira Gaming REGALOS MIGUEL Pro Vermelho e Preto"))));
+        assertThat(products, hasItem(hasProperty("name", is("Smartphone NOKIA 9 Pureview"))));
+        assertThat(products, hasItem(hasProperty("name", is("Auriculares Bluetooth True Wireless JBL T 225"))));
+        assertThat(products, hasItem(hasProperty("name", is("Smartwatch ULEFONE GPS Preto e Verde"))));
+        assertThat(products, hasItem(hasProperty("name", is("Passadeira de Corrida PRIXTON Run Fit"))));
     }
 
     @Test
@@ -91,7 +91,7 @@ public class EcommerceApplicationIntegrationTest {
     private OrderController.OrderForm prepareOrderForm() {
         OrderController.OrderForm orderForm = new OrderController.OrderForm();
         OrderProductDto productDto = new OrderProductDto();
-        productDto.setProduct(new Product(1L, "TV Set", 300.00, "http://placehold.it/200x100"));
+        productDto.setProduct(new Product(1L, "Smartphone MOTOROLA Moto G9 Plus", 203.00, "https://www.worten.pt/i/7eac30f7672bd1f4dc46c2eada57e43053c3c640.jpg"));
         productDto.setQuantity(2);
         orderForm.setProductOrders(Collections.singletonList(productDto));
 
