@@ -1,7 +1,7 @@
-package com.eu.shopme.product;
+package com.eu.shopme.ecommerce.controller;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
+import com.eu.shopme.ecommerce.model.Product;
+import com.eu.shopme.ecommerce.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,17 +12,14 @@ import javax.validation.constraints.NotNull;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    // productService constructor injection
+    private ProductService productService;
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping(value = { "", "/" })
     public @NotNull Iterable<Product> getProducts() {
         return productService.getAllProducts();
     }
 }
-
-    @Bean
-    CommandLineRunner runner(ProductService productService) {
-        return args -> {
-            productService.save(...);
-            // more products
-        }
