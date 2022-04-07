@@ -37,6 +37,9 @@ public class EcommerceApplicationIntegrationTest {
 
     @Autowired private OrderController orderController;
 
+    public EcommerceApplicationIntegrationTest() {
+    }
+
     @Test
     public void contextLoads() {
         Assertions
